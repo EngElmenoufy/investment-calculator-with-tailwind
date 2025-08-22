@@ -1,0 +1,26 @@
+@if (annualList().length) {
+<table class="table-auto w-full my-7">
+  <thead>
+    <tr class="text-app-accent-light">
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest (Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (annual of annualList(); track $index) {
+    <tr>
+      <td>{{annual.year}}</td>
+      <td>{{annual.valueEndOfYear | currency}}</td>
+      <td>{{annual.interest | currency}}</td>
+      <td>{{annual.totalInterest | currency}}</td>
+      <td>{{annual.totalAmountInvested | currency}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+} @else {
+<p class="my-7 text-center">Please enter some values and press "Calculate".</p>
+}

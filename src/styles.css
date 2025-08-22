@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+@theme {
+  --color-app-primary: #2a7761;
+  --color-app-primary-light: #62b8a0;
+  --color-app-accent-light: #7eeec0;
+}
+
+.input-num {
+  @apply p-1.5 border border-app-primary-light rounded-lg outline-0 w-full placeholder:text-gray-300/50;
+}
+
+@layer base {
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    @apply [appearance:textfield];
+  }
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#303b37, #1a1f1d);
+  color: #e1eeeb;
+}
+
+.center {
+  text-align: center;
+}
