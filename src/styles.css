@@ -1,14 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
-@theme {
-  --color-app-primary: #2a7761;
-  --color-app-primary-light: #62b8a0;
-  --color-app-accent-light: #7eeec0;
-}
-
 .input-num {
-  @apply p-1.5 border border-app-primary-light rounded-lg outline-0 w-full placeholder:text-gray-300/50;
+  @apply p-1.5 text-black border border-app-primary-light rounded-lg outline-0 w-full placeholder:text-gray-400;
 }
 
 @layer base {
